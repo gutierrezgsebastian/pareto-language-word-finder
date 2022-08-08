@@ -1,0 +1,13 @@
+services:
+  # postgres_db: 
+  #   image: postgres:14-bullseye
+
+  backend_django: 
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile.python.dev
+    ports: 
+      - 7500:8000
+    # command: python manage.py runserver
+    command: bash
+      
